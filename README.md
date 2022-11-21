@@ -52,6 +52,16 @@ Após completar os passos obrigatórios anteriores, para utilizar o script, esco
 
 Abra o seu terminal e digite o seguinte comando `"path/script-to-pr.sh https://github.com/... fistName lastName"` e o script se encarregará de fazer todo o trabalho.
 
+>*Exemplo*: caso eu queira fazer o clone desse repositório e abrir um Pull Request eu rodaria o seguinte comando no terminal da minha máquina `~/script-to-pr.sh https://github.com/feliperaindo/scritp-pull-request-trybe felipe carvalho`.
+>
+>Note que o `path/` é representado pelo `~/` o que representa a minha pasta `home/` na raiz do meu sistema.
+>
+>O `script-to-pr.sh` é a chamada do meu script.
+>
+>O `https://github.com/feliperaindo/scritp-pull-request-trybe` é a identificação do repositório github que quero clonar.
+>
+>E por fim, a parte final, que inclui os dois argumentos `felipe` e `carvalho` são respectivamente os parâmetros `firstName` e `lastName` descritos no código do script.
+
 <hr>
 
 <br>
@@ -92,3 +102,13 @@ Abra o seu terminal e digite o seguinte comando `"path/script-to-pr.sh https://g
 <br>
 
 Open terminal and type the follow command `"path/script-to-pr.sh https://github.com/... fistName lastName"` and the script will be sure to do all of work.
+
+>*Example*: if I want to clone this repository and open a Pull Request I run the follow command in my computer terminal `~/script-to-pr.sh https://github.com/feliperaindo/scritp-pull-request-trybe felipe carvalho`.
+>
+>Note that the `path/` is represented by `~/` that represents my directory `home/` on system root.
+>
+>The `script-to-pr.sh` is called by this part of command.
+>
+>The `https://github.com/feliperaindo/scritp-pull-request-trybe` is the github repository identification who I want to clone.
+>
+>At a final two arguments `felipe` e `carvalho` they are the parameters `firstName` and `lastName` described in script code.
