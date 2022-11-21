@@ -5,7 +5,7 @@
 #VERY IMPORTANT!!!!!! => To use this script you have to install "github cli" to use "gh" commands, and have a github personal token.
 
 # --> To install "github cli", on linux, access official webpage with this link "https://github.com/cli/cli/blob/trunk/docs/install_linux.md" and follow tutorial installation before continuing.
-# --> To install "github cli", on another platform, access official webpage with this link "https://github.com/cli/cliand follow tutorial installation before continuing.
+# --> To install "github cli", on another platform, access official webpage with this link "https://github.com/cli/cli and follow tutorial installation before continuing.
 # --> To create a github personal token access your github account webpage and folow this menu links: "settings" -> "developer settings" -> "personal access tokens" and "create a token".
 
 #REQUIRED! => substitute the text "personal token from github" for your personal github token. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
@@ -19,6 +19,9 @@ TOKEN="personal token from github";
 
 #REQUIRED => CHANGE 'local directory you will choose' FOR A ENTIRE PATH DIRECTORY YOU CHOOSE. THIS DIRECTORY WILL BE USE TO STORAGE ALL REPOSITORIES YOU WILL CLONE USING THIS SCRIPT. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
 LOCAL_DIR="local directory you will choose";
+
+#REQUIRED => CHANGE 'inform your team' FOR THE LETTER OF YOUR TEAM. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
+TEAM="inform your team"
 
 #RECOMENDED!!! => Before use this script at the first time, read entire code to understand what even part of this code do, and make some changes if you need or want.
 
@@ -36,7 +39,7 @@ urlUser=$(awk -F'/' '{print $4}' <<< "$URL");
 
 urlDirectory=$(awk -F"$urlUser" '{print $2}' <<< "$URL");
 
-urlProjectName=$(awk -F'-b-' '{print $2}' <<< "$URL");
+urlProjectName=$(awk -F"-$TEAM-" '{print $2}' <<< "$URL");
 
 #This function check if github repository is a valid URL and if you have access to it.
 checkUrlStatus () {
