@@ -11,17 +11,17 @@
 #REQUIRED! => substitute the text "personal token from github" for your personal github token. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
 TOKEN="personal token from github";
 
-#IMPORTANT!!! => TO EXECUTE this file as a script in your terminal, you need to run command "chmod u+x `local saved`/`file-name`" in terminal to make this file executable.
-# --> The reference `local saved` is the entire path of directory you saved this file.
-# --> The reference `file-name` is the name you have for this file (as default it name is `script-to-pr`). If you change it`s name or download it with another name, use file actual name.
-
-#IMPORTANT!!! => This script receive 3 (three) parameters as default, the 1º(first) parameter is a github main repository webpage URL. The 2º(second) and 3º(third) parameters are yours firstname and lastname, in this order. If you change parameters orders when execute this script it won`t work property.
-
 #REQUIRED => CHANGE 'local directory you will choose' FOR A ENTIRE PATH DIRECTORY YOU CHOOSE. THIS DIRECTORY WILL BE USE TO STORAGE ALL REPOSITORIES YOU WILL CLONE USING THIS SCRIPT. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
 LOCAL_DIR="local directory you will choose";
 
 #REQUIRED => CHANGE 'inform your team' FOR THE LETTER OF YOUR TEAM. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
 TEAM="inform your team"
+
+#REQUIRED!!! => TO EXECUTE this file as a script in your terminal, you need to run command "chmod u+x `local saved`/`file-name`" in terminal to make this file executable.
+# --> The reference `local saved` is the entire path of directory you saved this file.
+# --> The reference `file-name` is the name you have for this file (as default it name is `script-to-pr`). If you change it`s name or download it with another name, use file actual name.
+
+#REQUIRED!!! => This script receive 3 (three) parameters as default, the 1º(first) parameter is a github main repository webpage URL. The 2º(second) and 3º(third) parameters are yours firstname and lastname, in this order. If you change parameters orders when execute this script it won`t work property.
 
 #RECOMENDED!!! => Before use this script at the first time, read entire code to understand what even part of this code do, and make some changes if you need or want.
 
