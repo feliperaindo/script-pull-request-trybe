@@ -11,11 +11,11 @@ PT-BR:
 
 MUITO IMPORTANTE => Para usar esse script é necessário a instalação do pacote "github cli" para que o usuário possa usar comandos "gh", necessário também que o usuário tenha um token pessoal do github.
 
-# --> Para instalação do "github cli", no linux, acesse a página oficial com esse link "https://github.com/cli/cli/blob/trunk/docs/install_linux.md" e siga o tutorial de instação antes de continuar.
+--> Para instalação do "github cli", no linux, acesse a página oficial com esse link "https://github.com/cli/cli/blob/trunk/docs/install_linux.md" e siga o tutorial de instação antes de continuar.
 
-# --> Para instalação do "github cli", em outras plataformas, acesse a página oficial com esse link "https://github.com/cli/cli e siga o tutorial de instalação antes de continuar.
+--> Para instalação do "github cli", em outras plataformas, acesse a página oficial com esse link "https://github.com/cli/cli e siga o tutorial de instalação antes de continuar.
 
-# --> Para criar um token pessoal do github, acesse pelo navegador sua página pessoal do github e siga a seguinte sequência de links no menu principal: "settings" -> "developer settings" -> "personal access tokens" e "create a token".
+--> Para criar um token pessoal do github, acesse pelo navegador sua página pessoal do github e siga a seguinte sequência de links no menu principal: "settings" -> "developer settings" -> "personal access tokens" e "create a token".
 
 Após a instalação do "github cli" e da criação do token pessoal do github abra o arquivo "script-to-pr.sh" em um editor de texto (VSCode, gedit, vim, nano, etc.).
 
