@@ -7,7 +7,7 @@
 # --> To install "github cli", on linux, access official webpage with this link "https://github.com/cli/cli/blob/trunk/docs/install_linux.md" and follow tutorial installation before continuing.
 # --> To install "github cli", on another platform, access official webpage with this link "https://github.com/cli/cli and follow tutorial installation before continuing.
 # --> To create a github personal token access your github account webpage and folow this menu links: "settings" -> "developer settings" -> "personal access tokens" and "create a token".
-
+ 
 #REQUIRED! => substitute the text "personal token from github" for your personal github token. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
 TOKEN="personal token from github";
 
