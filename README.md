@@ -1,15 +1,38 @@
 # scritp-pull-request-trybe
-PT-BR:
-script em shell, destinado a automatizar comandos git para projetos da trybe.
+PT-BR:<br>
+Script em shell, destinado a automatizar comandos git para projetos da trybe.
 
-Faça um clone do conteúdo desse repositório e siga os próximos passos.
+Faça um clone do conteúdo desse repositório com um dos comandos abaixo:
+```bash
+git clone https://github.com/feliperaindo/sd-026-b-script-pull-request-trybe.git
+```
+
+ou 
+
+```bash
+git clone git@github.com:feliperaindo/sd-026-b-script-pull-request-trybe.git
+```
+
+e siga os próximos passos.
 
 <hr>
 
-EN-US:
-shell script, intended to automate git commands for trybe projects.
+EN-US:<br>
+Shell script, intended to automate git commands for trybe projects.
 
-Clone this repository content and follow next steps.
+Clone this repository content with one of commands below:
+
+```bash
+git clone https://github.com/feliperaindo/sd-026-b-script-pull-request-trybe.git
+```
+
+or
+
+```bash
+git clone git@github.com:feliperaindo/sd-026-b-script-pull-request-trybe.git
+```
+
+and follow next steps.
 <hr>
 
 <br>
@@ -42,13 +65,13 @@ Clone this repository content and follow next steps.
 
 > Após a instalação do "github cli" e da criação do token pessoal do github abra o arquivo "script-to-pr.sh" em um editor de texto (VSCode, gedit, vim, nano, etc.).
 
-+ **Passo 1** :arrow_forward: Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `TOKEN="personal token from github"` e substitua o texto "personal token from github" pelo seu token pessoal do github. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
++ **Passo 1** :arrow_down_small: <p>Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `TOKEN="personal token from github"` e substitua o texto "personal token from github" pelo seu token pessoal do github. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.</p>
 
-+ **Passo 2** :arrow_forward: Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `LOCAL_DIR="local directory you will choose"` e modifique 'local directory you will choose' pelo caminho completo do diretório a sua escolha. Esse diretório será usado para armazenar todos os repositórios que você clonar usando esse scritp. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
++ **Passo 2** :arrow_down_small: <p>Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `LOCAL_DIR="local directory you will choose"` e modifique 'local directory you will choose' pelo caminho completo do diretório a sua escolha. Esse diretório será usado para armazenar todos os repositórios que você clonar usando esse scritp. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.</p>
 
-+ **Passo 3** :arrow_forward: Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `TEAM="inform your team"` e modifique 'inform your team' pela letra MINÚSCULA da sua turma. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
++ **Passo 3** :arrow_down_small: <p>Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `TEAM="inform your team"` e modifique 'inform your team' pela letra MINÚSCULA da sua turma. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.</p>
 
-+ **Passo 4** :arrow_forward: Para poder executar esse script no terminal é necessário executar manualmente o comando a seguir no terminal: `chmod u+x 'local saved'/'file-name'`.
++ **Passo 4** :arrow_down_small: <p>Para poder executar esse script no terminal é necessário executar manualmente o comando a seguir no terminal: `chmod u+x 'local saved'/'file-name'`.</p>
 >A referência `local saved` é o caminho completo do diretório em que esse script esta salvo.
 ><br>
 >A referência `file-name` é o nome do desse arquivo (por padrão o nome desse aquivo é `script-to-pr.sh`). Se o nome foi alterado, use o nome atual do arquivo/script.
@@ -80,7 +103,7 @@ Abra o seu terminal e digite o seguinte comando `"path/script-to-pr.sh https://g
 
 >*Exemplo*: caso eu queira fazer o clone desse repositório e abrir um Pull Request eu rodaria o seguinte comando no terminal da minha máquina `~/script-to-pr.sh https://github.com/feliperaindo/scritp-pull-request-trybe felipe carvalho`.
 >
->Note que o `path/` é representado pelo `~/` o que representa a minha pasta `home/` na raiz do meu sistema.
+>Note que o `path/` é representado pelo `~/` o que representa a minha pasta `home/` na raiz do meu sistema. Que é onde o arquivo está salvo.
 >
 >O `script-to-pr.sh` é a chamada do meu script.
 >
@@ -162,7 +185,7 @@ Open terminal and type the follow command `"path/script-to-pr.sh https://github.
 
 >*Example*: if I want to clone this repository and open a Pull Request I run the follow command in my computer terminal `~/script-to-pr.sh https://github.com/feliperaindo/scritp-pull-request-trybe felipe carvalho`.
 >
->Note that the `path/` is represented by `~/` that represents my directory `home/` on system root.
+>Note that the `path/` is represented by `~/` that represents my directory `home/` on system root. Where this file is stored.
 >
 >The `script-to-pr.sh` is called by this part of command.
 >
