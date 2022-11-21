@@ -15,7 +15,7 @@ TOKEN="personal token from github";
 LOCAL_DIR="local directory you will choose";
 
 #REQUIRED => CHANGE 'inform your team' FOR THE LETTER OF YOUR TEAM. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
-TEAM="inform your team"
+TEAM="inform your team";
 
 #REQUIRED!!! => TO EXECUTE this file as a script in your terminal, you need to run command "chmod u+x `local saved`/`file-name`" in terminal to make this file executable.
 # --> The reference `local saved` is the entire path of directory you saved this file.
@@ -51,7 +51,7 @@ checkUrlStatus () {
 
 	counter=0;
 
-	until [[ $getStatus -eq 200 ]];
+	until [[ $getStatus -eq 200 ]]
 	do
 		((counter++));
 		echo "Tentativa número: $counter. $URL não está vivo e seu status é: $getStatus";
@@ -64,7 +64,7 @@ checkUrlStatus () {
 	done;
 
 	echo "$URL está vivo e seu status é: $getStatus";
-	#The commands above check every 2(two) seconds if you have access to github repository webpage informed as parameter. This commands run in a loop until you have access to repository, and print in your terminal how many tries it did and webpage status every try.
+	#The commands above check every 2(two) seconds if you have access to github repository webpage informed as parameter. This commands run in a loop until you have access to repository, and print in your terminal how many times loop tries access and webpage status every try.
 }
 
 #This function clone github repository, create a new branch and send it to remote repository.
@@ -107,25 +107,25 @@ cloneRepository () {
 		captureError=$(echo "$catchOutput" | grep -i error | awk -F':' '{print $1}');
 		echo "$catchOutput";
 	done;
-	#check every 2(two) seconds if new branch was sent to remote repository. This commands run in a loop until operation has successfully result, and print in your terminal how many tries it did and operation status every try.
+	#check every 2(two) seconds if new branch was sent to remote repository. This commands run in a loop until operation has successfully result, and print in your terminal how many times loop tries it and operation status every try.
 }
 
 #This function create a Pull Request.
 createPullRequest () {
 	#Set space as the delimiter
-	IFS='-'
+	IFS='-';
 
 	#Read the split words into an array based on space delimiter
-	read -ra arrayNames <<< "$urlProjectName"
+	read -ra arrayNames <<< "$urlProjectName";
 
 	#Concatenate each value of the array by using the loop
-	for eachName in "${arrayNames[@]}";
+	for eachName in "${arrayNames[@]}"
 	do
-  		prProjectName+="${eachName^} "
-	done
+  		prProjectName+="${eachName^} ";
+	done;
 
 	#Open pull request in gitHub repository
-	gh pr create -a "@me" -t "[ ${FIRST_NAME^} ${LAST_NAME^} ] ${prProjectName}" -f ;
+	gh pr create -a "@me" -t "[ ${FIRST_NAME^} ${LAST_NAME^} ] ${prProjectName}" -f;
 
 	#Delete empty file created to open pull request
 	rm fileText.txt;
