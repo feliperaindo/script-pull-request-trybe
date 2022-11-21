@@ -2,8 +2,12 @@
 PT-BR:
 script em shell, destinado a automatizar comandos git para projetos da trybe.
 
+Faça um clone do conteúdo desse repositório e siga os próximos passos.
+
 EN-US:
 shell script, intended to automate git commands for trybe projects.
+
+Clone this repository content and follow next steps.
 <br>
 <br>
 <br>
@@ -20,20 +24,25 @@ shell script, intended to automate git commands for trybe projects.
 
 > Após a instalação do "github cli" e da criação do token pessoal do github abra o arquivo "script-to-pr.sh" em um editor de texto (VSCode, gedit, vim, nano, etc.).
 
-+ **Passo 1** --> Nas primeiras linhas do arquivo encontre o texto `TOKEN="personal token from github"` e substitua o texto "personal token from github" pelo seu token pessoal do github. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
++ **Passo 1** --> Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `TOKEN="personal token from github"` e substitua o texto "personal token from github" pelo seu token pessoal do github. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
 
-+ **Passo 2** --> Nas primeiras linhas do arquivo encontre o texto `LOCAL_DIR="local directory you will choose"` e modifique 'local directory you will choose' pelo caminho completo do diretório a sua escolha. Esse diretório será usado para armazenar todos os repositórios que você clonar usando esse scritp. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
++ **Passo 2** --> Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `LOCAL_DIR="local directory you will choose"` e modifique 'local directory you will choose' pelo caminho completo do diretório a sua escolha. Esse diretório será usado para armazenar todos os repositórios que você clonar usando esse scritp. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
 
-+ **Passo 3** --> Nas primeiras linhas do arquivo encontre o texto `TEAM="inform your team"` e modifique 'inform your team' pela letra MINÚSCULA da sua turma. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
++ **Passo 3** --> Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `TEAM="inform your team"` e modifique 'inform your team' pela letra MINÚSCULA da sua turma. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.
 
 + **Passo 4** --> Para poder executar esse script no terminal é necessário executar manualmente o comando a seguir no terminal: `chmod u+x 'local saved'/'file-name'`.
 >A referência `local saved` é o caminho completo do diretório em que esse script esta salvo.
 ><br>
->A referência `file-name` é o nome do desse arquivo (por padrão o nome desse aquivo é `script-to-pr`). Se o nome foi alterado, use o nome atual do arquivo/script.
+>A referência `file-name` é o nome do desse arquivo (por padrão o nome desse aquivo é `script-to-pr.sh`). Se o nome foi alterado, use o nome atual do arquivo/script.
 
 **ATENÇÃO!!**: Esse scritp recebe 3 (três) parâmetros por padrão, o 1º (primeiro) parâmetro é a URL da página principal do repositório github. O 2º (segundo) e 3º (terceiro) parâmetros são respectivamente o primeiro e último nome do usuário. Se for trocada a ordem dos parâmetros no momento da execução esse script não funcionará adequadamente.
 
 **RECOMENDADO**: Antes de usar esse script pela primeira vez, leia o código para entender o que cada linha de código faz, e se necessário faça as alterações que achar pertinente.
+
+### COMO UTILIZAR:
+Após completar os passos obrigatórios anteriores, para utilizar o script, escolha um reposotório no github e copie a URL.
+
+Abra o seu terminal e digite o seguinte comando `"path/script-to-pr.sh https://github.com/feliperaindo/scritp-pull-request-trybe fistName lastName"` e o script se encarregará de fazer todo o trabalho.
 
 <br>
 <br>
