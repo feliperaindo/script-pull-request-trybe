@@ -43,7 +43,7 @@ urlProjectName=$(awk -F"-$TEAM-" '{print $2}' <<< "$URL");
 
 #This function check if github repository is a valid URL and if you have access to it.
 checkUrlStatus () {
-	getStatus=$(curl --write-out '%{http_code}' --silent --output /dev/null --request GET \
+	getStatus=$(curl -w '%{http_code}' -s -o /dev/null -X GET \
 	--url "https://api.github.com/repos/$urlCut" \
 	--header "Accept: application/vnd.github.v3+json" \
 	--header "Authorization: Bearer $TOKEN" \
@@ -56,7 +56,7 @@ checkUrlStatus () {
 		((counter++));
 		echo "Tentativa número: $counter. $URL não está vivo e seu status é: $getStatus";
 		sleep 2;
-		getStatus=$(curl --write-out '%{http_code}' --silent --output /dev/null --request GET \
+		getStatus=$(curl -w '%{http_code}' -s -o /dev/null -X GET \
 		--url "https://api.github.com/repos/$urlCut" \
 		--header "Accept: application/vnd.github.v3+json" \
 		--header "Authorization: Bearer $TOKEN" \
