@@ -67,7 +67,7 @@ and follow next steps.
 
 + **Passo 1** :arrow_down_small: <p>Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `TOKEN="personal token from github"` e substitua o texto "personal token from github" pelo seu token pessoal do github. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.</p>
 
-+ **Passo 2** :arrow_down_small: <p>Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `LOCAL_DIR="local directory you will choose"` e modifique "local directory you will choose" pelo caminho completo do diretório a sua escolha. Esse diretório será usado para armazenar todos os repositórios que você clonar usando esse scritp. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.</p>
++ **Passo 2** :arrow_down_small: <p>Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `LOCAL_DIR="local directory you will choose"` e modifique "local directory you will choose" pelo caminho completo do diretório a sua escolha. Esse diretório será usado para armazenar todos os repositórios que você clonar usando esse script. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.</p>
 
 + **Passo 3** :arrow_down_small: <p>Nas primeiras linhas do arquivo `script-to-pr.sh` encontre o texto `TEAM="inform your team"` e modifique "inform your team" pela letra MINÚSCULA da sua turma. NÃO REMOVA AS ASPAS DUPLAS, APENAS SUBSTITUA O TEXTO.</p>
 
@@ -149,7 +149,7 @@ Abra o seu terminal e digite o seguinte comando `"path/script-to-pr.sh https://g
 
 + Step 1 :arrow_forward: In the first lines from file `script-to-pr.sh` foud the text `TOKEN="personal token from github"` and substitute "personal token from github" for your personal github token. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
 
-+ Step 2 :arrow_forward: In the first lines from file `script-to-pr.sh` foud the text `LOCAL_DIR="local directory you will choose"` and substitute "local directory you will choose" for a entire path directory you choose. This directory will be use to storage all repositories you will clone using this scritp. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
++ Step 2 :arrow_forward: In the first lines from file `script-to-pr.sh` foud the text `LOCAL_DIR="local directory you will choose"` and substitute "local directory you will choose" for a entire path directory you choose. This directory will be use to storage all repositories you will clone using this script. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
 
 + Step 3 :arrow_forward: In the first lines from file `script-to-pr.sh` foud the text `TEAM="inform your team"` and substitute "inform your team" for the letter in LOWER CASE of your team. DO NOT REMOVE QUOTATION MARKS, JUST SUBSTITUTE THE TEXT INSIDE.
 
