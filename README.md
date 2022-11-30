@@ -1,4 +1,4 @@
-# scritp-pull-request-trybe
+# script-pull-request-trybe
 PT-BR:<br>
 Script em shell, destinado a automatizar comandos git para projetos da trybe.
 
