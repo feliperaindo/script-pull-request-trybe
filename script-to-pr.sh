@@ -42,33 +42,29 @@ urlDirectory=$(awk -F"$urlUser" '{print $2}' <<< "$URL");
 urlProjectName=$(awk -F"-$TEAM-" '{print $2}' <<< "$URL");
 
 #This function check if github repository is a valid URL and if you have access to it.
-checkUrlStatus () {
+counter=0;
+
+checkUrlStatus() {
 	getStatus=$(curl -w '%{http_code}' -s -o /dev/null -X GET \
 	--url "https://api.github.com/repos/$urlCut" \
 	--header "Accept: application/vnd.github.v3+json" \
 	--header "Authorization: Bearer $TOKEN" \
 	--include);
 
-	counter=0;
-
-	until [[ $getStatus -eq 200 ]]
-	do
-		((counter++));
-		echo "Tentativa número: $counter. $URL não está vivo e seu status é: $getStatus";
-		sleep 2;
-		getStatus=$(curl -w '%{http_code}' -s -o /dev/null -X GET \
-		--url "https://api.github.com/repos/$urlCut" \
-		--header "Accept: application/vnd.github.v3+json" \
-		--header "Authorization: Bearer $TOKEN" \
-		--include);
-	done;
-
-	echo "$URL está vivo e seu status é: $getStatus";
+	if [[ $getStatus -eq 200 ]]
+	  then
+	  	echo "$URL está vivo e seu status é: $getStatus";
+	else
+			((counter++));
+		  echo "Tentativa número: $counter. $URL não está vivo e seu status é: $getStatus";
+		  sleep 2;
+		  checkUrlStatus;
+  fi
 	#The commands above check every 2(two) seconds if you have access to github repository webpage informed as parameter. This commands run in a loop until you have access to repository, and print in your terminal how many times loop tries access and webpage status every try.
 }
 
 #This function clone github repository, create a new branch and send it to remote repository.
-cloneRepository () {
+cloneRepository() {
 	#Navigate to a local directory you informed before.
 	cd "$LOCAL_DIR" || exit;
 
@@ -88,30 +84,30 @@ cloneRepository () {
 	git add .;
 
 	git commit -m 'create file to open PR';
+}
 
-	#Next commands are responsible for check if new branch was sent to remote repository.
+counterError=0;
+
+syncRemoteBranch() {
 	catchOutput=$(git push -u origin "$FIRST_NAME-$LAST_NAME-$urlProjectName" 2>&1);
 	
 	echo "$catchOutput";
 	
 	captureError=$(echo "$catchOutput" | grep -i error | awk -F':' '{print $1}');
 	
-	counterError=0;
-
-	while [[ $captureError = 'ERROR' ]]
-	do
-		((counterError++));
-		echo "Tentativa número: $counterError.";
-		sleep 2;
-		catchOutput=$(git push -u origin "$FIRST_NAME-$LAST_NAME-$urlProjectName" 2>&1);
-		captureError=$(echo "$catchOutput" | grep -i error | awk -F':' '{print $1}');
-		echo "$catchOutput";
-	done;
+	if [[ $captureError = 'ERROR' ]];
+		then
+			((counterError++));
+			echo "Tentativa número: $counterError.";
+			sleep 2;
+			syncRemoteBranch;
+	fi
 	#check every 2(two) seconds if new branch was sent to remote repository. This commands run in a loop until operation has successfully result, and print in your terminal how many times loop tries it and operation status every try.
 }
 
+
 #This function create a Pull Request.
-createPullRequest () {
+createPullRequest() {
 	#Set space as the delimiter
 	IFS='-';
 
@@ -133,6 +129,7 @@ createPullRequest () {
 
 checkUrlStatus;
 cloneRepository;
+syncRemoteBranch;
 createPullRequest;
 
 #Developed by: Felipe de Carvalho Raindo - turma 26 - tribo "B"
